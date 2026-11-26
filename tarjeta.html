@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tarjeta de Presentación - Orlando Javier Rodriguez Roque</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      background-color: #1e293b;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      padding: 30px;
+    }
+
+    .etiqueta {
+      color: #cbd5e1;
+      font-size: 13px;
+      margin-bottom: -16px;
+      letter-spacing: 0.5px;
+    }
+
+    .tarjeta {
+      width: 9cm;
+      height: 5cm;
+      background: linear-gradient(135deg, #0f172a 0%, #111827 100%);
+      color: #f8fafc;
+      border-radius: 3mm;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      border: 0.3mm solid #334155;
+    }
+
+    .tarjeta::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2.2mm;
+      background: linear-gradient(180deg, #38bdf8, #22c55e);
+    }
+
+    .frente {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4mm 4mm 4mm 6mm;
+      height: 100%;
+    }
+
+    .info {
+      width: 56%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.5mm;
+    }
+
+    .nombre {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.15;
+    }
+
+    .titulo {
+      font-size: 6.8pt;
+      font-weight: 600;
+      color: #38bdf8;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      margin-bottom: 1.5mm;
+    }
+
+    .dato {
+      font-size: 6.2pt;
+      color: #cbd5e1;
+      line-height: 1.3;
+      word-break: break-word;
+    }
+
+    .dato span {
+      color: #22c55e;
+      font-weight: 600;
+    }
+
+    .codigos {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2mm;
+    }
+
+    .caja-codigo {
+      background: #ffffff;
+      padding: 1.2mm;
+      border-radius: 1.5mm;
+      text-align: center;
+      width: 1.95cm;
+    }
+
+    .caja-codigo img {
+      width: 1.55cm;
+      height: 1.55cm;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .caja-codigo p {
+      font-size: 4.5pt;
+      color: #0f172a;
+      font-weight: 700;
+      margin-top: 0.6mm;
+      text-transform: uppercase;
+    }
+
+    .reverso {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5mm 6mm 5mm 7mm;
+      height: 100%;
+    }
+
+    .reverso-texto {
+      width: 55%;
+      display: flex;
+      flex-direction: column;
+      gap: 2mm;
+    }
+
+    .reverso-texto h2 {
+      font-size: 9pt;
+      color: #38bdf8;
+    }
+
+    .reverso-texto p {
+      font-size: 6.5pt;
+      color: #cbd5e1;
+      line-height: 1.35;
+    }
+
+    .reverso-url {
+      font-size: 6pt;
+      color: #22c55e;
+      font-weight: 600;
+      margin-top: 1mm;
+    }
+
+    .reverso-img-box {
+      width: 38%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #ffffff;
+      padding: 2mm;
+      border-radius: 2mm;
+    }
+
+    .reverso-img-box img {
+      width: 2.4cm;
+      height: 2.4cm;
+      object-fit: cover;
+      border-radius: 1mm;
+    }
+
+    .reverso-img-box span {
+      font-size: 5pt;
+      color: #0f172a;
+      font-weight: 700;
+      margin-top: 1mm;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 10mm;
+      }
+      .etiqueta {
+        color: #334155;
+      }
+      .tarjeta {
+        box-shadow: none;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="etiqueta">FRENTE (9 × 5 cm)</div>
+  <div class="tarjeta">
+    <div class="frente">
+      <div class="info">
+        <div class="nombre">Orlando Javier<br>Rodriguez Roque</div>
+        <div class="titulo">Futuro Ing. Informático</div>
+        <div class="dato"><span>Tel:</span> +52 000 000 0000</div>
+        <div class="dato"><span>Email:</span> orlando.rodriguez@ejemplo.com</div>
+        <div class="dato"><span>Portafolio:</span> linkedin.com/in/orlando-rodriguez</div>
+      </div>
+
+      <div class="codigos">
+        <div class="caja-codigo">
+          <img src="qr-ar.png" alt="QR App AR">
+          <p>1. Abre App AR</p>
+        </div>
+
+        <div class="caja-codigo">
+          <img src="marcador-hiro.png" alt="Marcador Hiro">
+          <p>2. Escanea Hiro</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="etiqueta">REVERSO (9 × 5 cm)</div>
+  <div class="tarjeta">
+    <div class="reverso">
+      <div class="reverso-texto">
+        <h2>Más sobre mis proyectos</h2>
+        <p>Escanea o consulta mi portafolio online para conocer mis trabajos, repositorios y experiencia en desarrollo.</p>
+        <div class="reverso-url">github.com/tu-usuario</div>
+      </div>
+
+      <div class="reverso-img-box">
+        <img src="imagen-reverso.png" alt="Más información">
+        <span>Escanea / Ver más</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

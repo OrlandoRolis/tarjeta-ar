@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#ui-overlay {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  text-align: center;
+  width: 90%;
+  max-width: 360px;
+}
+
+#status-text {
+  background-color: rgba(15, 23, 42, 0.85);
+  color: #f8fafc;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  border: 1px solid #38bdf8;
+  margin-bottom: 10px;
+}
+
+#portfolio-btn {
+  display: inline-block;
+  background-color: #22c55e;
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.hidden {
+  display: none !important;
+}
